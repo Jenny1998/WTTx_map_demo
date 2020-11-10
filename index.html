@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,152 +8,325 @@
     <link rel="stylesheet" href="css/mystyles.css" />
     <link rel="manifest" href="./manifest.json" />
   </head>
-  <body>
 
-    <nav class="navbar is-primary">
-      <!-- navbar brand, navbar menu... -->
+  <body>
+    <nav class="is-black navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        <a href="#">
+          <img src="./logo_400x200.png" alt="Huawei" width="100" height="50" />
         </a>
-    
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-    
+
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-    
-          <a class="navbar-item">
-            Documentation
-          </a>
-    
+          <a class="navbar-item"> Explore </a>
+
+          <a class="navbar-item"> Shop </a>
+
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
-            </a>
-    
+            <a class="navbar-link"> About us </a>
+
             <div class="navbar-dropdown">
-              <a class="navbar-item">
-                About
-              </a>
-              <a class="navbar-item">
-                Jobs
-              </a>
-              <a class="navbar-item">
-                Contact
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
-              </a>
-            </div>
-          </div>
-        </div>
-    
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
-              </a>
+              <a class="navbar-item"> About </a>
+              <a class="navbar-item"> Jobs </a>
+              <a class="navbar-item"> Contact </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item"> Report an issue </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <h1 class="title">Bulma</h1>
 
-    <p class="subtitle">
-      Modern CSS framework based on
-      <a
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"
-        >Flexbox</a
-      >
-    </p>
+    <section class="hero is-fullheight-with-navbar level">
+      <div class="hero-body">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent is-vertical">
+            <div class="field is-horizontal">
+              <div class="field-label is-medium">
+                <label class="label">Contact</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded has-icons-left">
+                    <input
+                      id="name"
+                      class="input"
+                      type="text"
+                      placeholder="Full Name"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control is-expanded has-icons-left has-icons-right">
+                    <input
+                      id="email"
+                      class="input"
+                      type="email"
+                      placeholder="Email"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
 
-    <div class="field">
-      <div class="control">
-        <input class="input" type="text" placeholder="Input" />
+            <div class="field is-horizontal">
+              <div class="field-label"></div>
+              <div class="field-body">
+                <div class="field is-expanded">
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a class="button is-static"> +44 </a>
+                    </p>
+                    <p class="control is-expanded">
+                      <input
+                        id="phone"
+                        class="input"
+                        type="tel"
+                        placeholder="Phone number"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-medium">
+                <label class="label">Street Address</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded has-icons-left autocomplete">
+                    <input
+                      id="streetAddr"
+                      class="input"
+                      type="text"
+                      placeholder="Address Line 1"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label">
+                <label class="label"></label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded has-icons-left autocomplete">
+                    <input
+                      id="streetAddr2"
+                      class="input"
+                      type="text"
+                      placeholder="Address Line 2"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-medium">
+                <label class="label">Floor number</label>
+              </div>
+
+              <div class="field-body">
+                <div class="select">
+                  <select id="floor">
+                    <option>N/A</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-medium">
+                <label class="label">City / District</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded has-icons-left autocomplete">
+                    <input id="city" class="input" type="text" />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field-label is-medium" style="margin-left: 1.25rem">
+                  <label class="label" style="width: 151px; text-align: center"
+                    >State / Province</label
+                  >
+                </div>
+                <div class="field">
+                  <p class="control is-expanded has-icons-left autocomplete">
+                    <input id="province" class="input" type="text" />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal" style="margin-top: 0.75rem">
+              <div class="field-label is-medium" style="padding-top: 0">
+                <label class="label">Delivery Time</label>
+              </div>
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="control">
+                    <label class="radio">
+                      <input type="radio" name="member" />
+                      Morning
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="member" />
+                      Afternoon
+                    </label>
+
+                    <label class="radio">
+                      <input type="radio" name="member" />
+                      Evening
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-medium">
+                <label class="label">Notes</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <textarea
+                      id="notes"
+                      class="textarea"
+                      placeholder="Anything else that you'd like to tell us"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label"></div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" id="consent" />
+                      I agree to the
+                      <a href="">
+                        <strong> Terms And Conditions </strong>
+                      </a>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field is-horizontal">
+              <div class="field-label">
+                <!-- Left empty for spacing -->
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <a href="map.html" class="button is-primary">
+                      Next
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="field">
-      <p class="control">
-        <span class="select">
-          <select>
-            <option>Select dropdown</option>
-          </select>
-        </span>
-      </p>
-    </div>
+    <footer class="footer" style="background-color: hsl(0, 0%, 21%)">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-3 is-offset-2">
+            <h2><strong style="color: hsl(0, 0%, 96%)">Products</strong></h2>
+            <ul style="color: hsl(0, 0%, 71%)">
+              <li>HUAWEI MatePad PRO</li>
+              <li>HUAWEI P40 PRO</li>
+              <li>HUAWEI MATE30 PRO</li>
+              <li>HUAWEI MATEBOOK D 15</li>
+              <li>HUAWEI MATEBOOK D 14</li>
+              <li>HUAWEI Freebuds 3</li>
+              <li>HUAWEI Watch GT2</li>
+              <li>HUAWEI P30 Pro</li>
+            </ul>
+          </div>
+          <div class="column is-3">
+            <h2><strong style="color: hsl(0, 0%, 96%)">Support</strong></h2>
+            <ul style="color: hsl(0, 0%, 71%)">
+              <li>Service Center Location</li>
+              <li>Spare Part Price</li>
+              <li>Warranty Policy</li>
+              <li>Warranty Period & Support Service Query</li>
+              <li>Return Policy</li>
+              <li>Exchange Policy</li>
+              <li>Push Notification Policy</li>
+            </ul>
+          </div>
+          <div class="column is-4">
+            <h2>
+              <strong style="color: hsl(0, 0%, 96%)">About Huawei</strong>
+            </h2>
+            <ul style="color: hsl(0, 0%, 71%)">
+              <li>News & Events</li>
+              <li>Huawei Enterprise</li>
+              <li>Huawei Carrier</li>
+              <li>Huawei Group</li>
+              <li>Huawei Marine</li>
+              <li>Work for Huawei</li>
+              <li>Contact Us</li>
+              <li>App Gallery</li>
+            </ul>
+          </div>
+        </div>
 
-    <div class="buttons">
-      <a class="button is-primary">Primary</a>
-      <a class="button is-link">Link</a>
-    </div>
-
-    <script>
-      (() => {
-        // This is the service worker with the Cache-first network
-
-        // Add this below connect to your HTML page, or add the js file to your page at the very top to register service worker
-
-        // Check compatibility for the browser we're running this in
-        if ("serviceWorker" in navigator) {
-          if (navigator.serviceWorker.controller) {
-            console.log(
-              "[PWA Builder] active service worker found, no need to register"
-            );
-          } else {
-            // Register the service worker
-            navigator.serviceWorker
-              .register("serviceWorker.js", {
-                scope: "./",
-              })
-              .then(function (reg) {
-                console.log(
-                  "[PWA Builder] Service worker has been registered for scope: " +
-                    reg.scope
-                );
-              });
-          }
-        }
-      })();
-
-      let deferredPrompt = null;
-
-      window.addEventListener("beforeinstallprompt", (e) => {
-        $("#install-button").show();
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
-        deferredPrompt = e;
-      });
-
-      async function install() {
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          console.log(deferredPrompt);
-          deferredPrompt.userChoice.then(function (choiceResult) {
-            if (choiceResult.outcome === "accepted") {
-              console.log("Your PWA has been installed");
-            } else {
-              console.log("User chose to not install your PWA");
-            }
-            deferredPrompt = null;
-          });
-        }
-      }
-    </script>
+        <div style="color: hsl(0, 0%, 55%)" class="content has-text-centered">
+          <p>
+            Copyright © 2019 Huawei Consumer Business Group. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

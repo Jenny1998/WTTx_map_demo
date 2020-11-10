@@ -11155,3 +11155,6 @@ a.navbar-item,
       padding: 9rem 1.5rem; }
     .section.is-large {
       padding: 18rem 1.5rem; } }
+
+.reservedElements {
+  display: none; }
