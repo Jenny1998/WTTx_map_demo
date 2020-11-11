@@ -73,11 +73,16 @@ require([
   view.ui.add(planCard, "top-right");
 
   document.getElementById("basic").addEventListener("click", function () {
+    $(".progress").val(100);
+
     view.ui.empty("top-right");
     view.ui.add(success, "top-right");
+    
   });
 
   document.getElementById("premium").addEventListener("click", function () {
+    $(".progress").val(100);
+
     view.ui.empty("top-right");
     view.ui.add(success, "top-right");
   });
