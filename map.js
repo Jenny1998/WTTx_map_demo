@@ -3,17 +3,16 @@ require([
   "esri/views/MapView",
   "esri/Graphic",
   "esri/layers/GraphicsLayer",
-  "esri/views/ui/UI",
-], function (Map, MapView, Graphic, GraphicsLayer, UI) {
+], function (Map, MapView, Graphic, GraphicsLayer) {
   var map = new Map({
-    basemap: "streets",
+    basemap: "streets-navigation-vector",
   });
 
   var view = new MapView({
     container: "viewDiv",
     map: map,
     center: [-118.71511, 34.09042],
-    zoom: 11,
+    zoom: 13,
   });
 
   var graphicsLayer = new GraphicsLayer();
@@ -26,8 +25,12 @@ require([
       latitude: 34.09042,
     },
     symbol: {
-      type: "simple-marer",
-      color: [75, 156, 211, 0.8],
+      type: "simple-marker",
+      color: [226, 119, 40],
+      outline: {
+        color: [225, 225, 225],
+        width: 1,
+      },
     },
     attributes: {
       Name: "Available plans",
@@ -61,11 +64,11 @@ require([
     },
     symbol: {
       type: "text",
-    //   color: [241, 70, 104, 0.8],
-      text: "We found your location!",
+      color: [249, 87, 56],
+      text: "Our service is available at your location!",
       xoffset: 0,
       yoffset: -25,
-      font: { size: 14 },
+      font: { size: 12 },
     },
   });
   graphicsLayer.add(textGraphic);
@@ -77,14 +80,11 @@ require([
 
     view.ui.empty("top-right");
     view.ui.add(success, "top-right");
-    
   });
 
   document.getElementById("premium").addEventListener("click", function () {
     $(".progress").val(100);
-
     view.ui.empty("top-right");
     view.ui.add(success, "top-right");
   });
-
 });

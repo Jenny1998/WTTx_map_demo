@@ -243,15 +243,15 @@
             <label class="label">Delivery Time</label>
             <div class="control">
               <label class="radio">
-                <input type="radio" checked />
+                <input type="radio" name="delivery" checked />
                 Morning
               </label>
               <label class="radio">
-                <input type="radio" />
+                <input type="radio" name="delivery" />
                 Afternon
               </label>
               <label class="radio">
-                <input type="radio" />
+                <input type="radio" name="delivery" />
                 Evening
               </label>
             </div>
@@ -307,10 +307,8 @@
       </div>
     </div>
 
-
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script>
-
       $("#enter-map").click(() => {
         $("#index").fadeOut(800, () => {
           $("#map").fadeIn(800);
@@ -327,7 +325,6 @@
       });
     </script>
     <script src="https://js.arcgis.com/4.17/"></script>
-
     <script src="./app.js"></script>
     <script src="./map.js"></script>
   </body>
