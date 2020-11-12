@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="node_modules/@fortawesome/fontawesome-free/css/all.css"
     />
-    <link rel="icon" type="image/ico"  href="/favicon.ico" />
+    <link rel=" shortcut icon" href="/favicon.ico" />
 
     <style>
       #form-page {
@@ -307,14 +307,10 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://js.arcgis.com/4.17/"></script>
-    <script src="./app.js"></script>
-    <script src="./map.js"></script>
 
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script>
-      $form = $("#form-page");
-      $map = $("#map-page");
+
       $("#enter-map").click(() => {
         $("#index").fadeOut(800, () => {
           $("#map").fadeIn(800);
@@ -322,13 +318,17 @@
       });
 
       $("#next-btn").click(() => {
-        $form.attr("class", "slide-out");
+        $("#form-page").attr("class", "slide-out");
         $(".progress").val(50);
         setTimeout(() => {
-          $form.hide();
-          $map.attr("class", "slide-in");
+          $("#form-page").hide();
+          $("#map-page").attr("class", "slide-in");
         }, 800);
       });
     </script>
+    <script src="https://js.arcgis.com/4.17/"></script>
+
+    <script src="./app.js"></script>
+    <script src="./map.js"></script>
   </body>
 </html>
