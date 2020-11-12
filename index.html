@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="https://js.arcgis.com/4.17/esri/css/main.css"
     />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
     <style>
       #form-page {
         position: absolute;
@@ -54,9 +58,9 @@
 
   <body style="position: relative">
     <div id="index" style="z-index: 10">
-      <section class="section">
-        <h1 class="title is-1">Dashboard</h1>
-        <h5 class="title is-5">WTTx Suite</h5>
+      <section class="section" style="padding: 3rem 1.5rem 0 1.5rem">
+        <h1 class="title is-1">WTTx Suite</h1>
+        <h5 class="title is-5">Wireless to the x</h5>
       </section>
       <section class="section">
         <div class="container">
@@ -67,18 +71,23 @@
                   <div class="card-content">
                     <p class="title">Map</p>
                     <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris.
+                      <h4 class="title is-h4">
+                        Order a CPE at your location in two steps.
+                      </h4>
+                      We provide CPEs for the top telecommunication companies
                       <br />
-                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      <button
+                        id="enter-map"
+                        class="button is-fullwidth"
+                        style="justify-content: center; margin-top: 15px"
+                      >
+                        <span>Enter</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-arrow-right"></i>
+                        </span>
+                      </button>
                     </div>
                   </div>
-                  <footer class="card-footer">
-                    <!-- <a href="#" class="card-footer-item">About</a> -->
-                    <a id="enter-map" href="#" class="card-footer-item"
-                      >Enter</a
-                    >
-                  </footer>
                 </div>
               </div>
             </div>
@@ -88,17 +97,23 @@
                   <div class="card-content">
                     <p class="title">Service Insight</p>
                     <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
+                      <h4 class="title is-h4">
+                        Find out about the status of all your devices here.
+                      </h4>
+                      With over 20 features, we let you see what your care
+                      about.
                       <br />
-                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      <button
+                        class="button is-fullwidth"
+                        style="justify-content: center; margin-top: 15px"
+                      >
+                        <span>Enter</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-arrow-right"></i>
+                        </span>
+                      </button>
                     </div>
                   </div>
-                  <footer class="card-footer">
-                    <!-- <a href="#" class="card-footer-item">About</a> -->
-                    <a href="#" class="card-footer-item">Enter</a>
-                  </footer>
                 </div>
               </div>
             </div>
@@ -115,87 +130,136 @@
       <div id="form-page">
         <div class="section" style="padding: 1rem 1.5rem 1rem 1.5rem">
           <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Text input" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Username</label>
-            <div class="control has-icons-left has-icons-right">
+            <label class="label">Contact</label>
+            <div class="control has-icons-left">
               <input
-                class="input is-success"
+                class="input"
                 type="text"
-                placeholder="Text input"
-                value="bulma"
+                placeholder="Full Name"
+                value="Jenny Wang"
               />
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
             </div>
-            <p class="help is-success">This username is available</p>
           </div>
-
+          <div class="field">
+            <div class="field-label"></div>
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field has-addons">
+                  <p class="control">
+                    <a class="button is-static"> +1 </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <input
+                      class="input"
+                      type="tel"
+                      placeholder="Your phone number"
+                      value="9199454661"
+                    />
+                  </p>
+                </div>
+                <p class="help">Do not enter the first zero</p>
+              </div>
+            </div>
+          </div>
           <div class="field">
             <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
+            <div class="control has-icons-left">
               <input
-                class="input is-danger"
+                class="input"
                 type="email"
                 placeholder="Email input"
-                value="hello@"
+                value="jenn_w@outlook.com"
               />
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
-              </span>
             </div>
-            <p class="help is-danger">This email is invalid</p>
           </div>
 
           <div class="field">
-            <label class="label">Subject</label>
+            <label class="label">Street Address</label>
+            <div class="control has-icons-left">
+              <input
+                class="input"
+                type="text"
+                placeholder="Address input"
+                value="505 Wilmington Street"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Floor Number</label>
             <div class="control">
               <div class="select">
                 <select>
-                  <option>Select dropdown</option>
-                  <option>With options</option>
+                  <option>1-5</option>
+                  <option>6-10</option>
+                  <option>11-15</option>
+                  <option>16-20</option>
+                  <option>21-25</option>
+                  <option>26-30</option>
                 </select>
               </div>
             </div>
           </div>
 
           <div class="field">
-            <label class="label">Message</label>
+            <label class="label">City/District</label>
+            <div class="control has-icons-left">
+              <input
+                class="input"
+                type="text"
+                placeholder=""
+                value="Chapel Hill"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-city"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">State/Province</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+              <input
+                class="input"
+                type="text"
+                placeholder=""
+                value="North Carolina"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Delivery Time</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" checked />
+                Morning
+              </label>
+              <label class="radio">
+                <input type="radio" />
+                Afternon
+              </label>
+              <label class="radio">
+                <input type="radio" />
+                Evening
+              </label>
             </div>
           </div>
 
           <div class="field">
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" checked />
                 I agree to the <a href="#">terms and conditions</a>
-              </label>
-            </div>
-          </div>
-
-          <div class="field">
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question" />
-                Yes
-              </label>
-              <label class="radio">
-                <input type="radio" name="question" />
-                No
               </label>
             </div>
           </div>
@@ -204,18 +268,13 @@
             <div class="control">
               <button id="next-btn" class="button is-link">Next</button>
             </div>
-            <div class="control">
-              <button class="button is-link is-light">Cancel</button>
-            </div>
           </div>
         </div>
       </div>
 
       <div id="map-page">
-        <section
-          id="viewDiv"
-          class="hero is-fullheight-with-navbar level"
-        ></section>
+        <section id="viewDiv" class="hero is-fullheight">
+        </section>
         <div id="planCard" class="card">
           <header class="card-header">
             <p class="card-header-title">Available plans</p>
@@ -232,7 +291,6 @@
             <a href="#" id="premium" class="card-footer-item">PREMIUM</a>
           </footer>
         </div>
-
         <div class="reserved-elements">
           <div id="success" class="card">
             <div class="card-content">
@@ -248,11 +306,11 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://js.arcgis.com/4.17/"></script>
     <script src="./app.js"></script>
     <script src="./map.js"></script>
+
     <script>
       $form = $("#form-page");
       $map = $("#map-page");
